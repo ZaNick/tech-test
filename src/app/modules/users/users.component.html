@@ -1,0 +1,14 @@
+<div class="user" *ngFor="let user of users; let i = index" (click)="onUserClick(user)">
+  <div class="col">
+    <div class="avatar">
+      <img [src]="config.apiUrl + user.avatar" alt="">
+    </div>
+    <div class="name">{{user.name}}</div>
+    <div class="balance">{{user.balance| number:'1.2-2':'Ru'}}</div>
+  </div>
+
+  <div class="col">
+    <div class="last-change">Последнее изменение {{user.lastUpdatedAt | timeDiff}} секунд назад</div>
+    <div class="status">{{user.status | userStatus}}</div>
+  </div>
+</div>

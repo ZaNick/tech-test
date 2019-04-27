@@ -1,0 +1,31 @@
+.close-modal {
+  color: #6979F8;
+  font-size: 35px;
+  cursor: pointer;
+}
+
+.form-input,
+.form-select {
+  background: #fff;
+  border: 1px solid #ecebed;
+  width: 100%;
+  border-radius: 6px;
+  font-size: 15px;
+  line-height: 18px;
+  padding: 14px 16px;
+  margin-bottom: 24px;
+  transition: border 0.2s linear;
+
+  &:focus {
+    outline: none;
+    box-shadow: 0px 7px 64px rgba(0, 0, 0, 0.07);
+    border: 1px solid #6979F8;
+  }
+}
+
+.form-select {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAiIGhlaWdodD0iNyIgdmlld0JveD0iMCAwIDEwIDciIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTAuNDE1MDYgMS42NTA3OUw0LjI0MDg0IDYuMTE0MkM0LjYwMDI2IDYuNTMzNTMgNS4yMzE1NiA2LjU4MjA5IDUuNjUwODkgNi4yMjI2N0M1LjY4OTc3IDYuMTg5MzQgNS43MjYwMyA2LjE1MzA4IDUuNzU5MzUgNi4xMTQyTDkuNTg1MTMgMS42NTA3OUM5Ljk0NDU1IDEuMjMxNDcgOS44OTU5OSAwLjYwMDE2NiA5LjQ3NjY3IDAuMjQwNzQzQzkuMjk1NDIgMC4wODUzOTIyIDkuMDY0NTkgMCA4LjgyNTg3IDBMMS4xNzQzMiAwQzAuNjIyMDMyIDAgMC4xNzQzMTYgMC40NDc3MTUgMC4xNzQzMTYgMUMwLjE3NDMxNiAxLjIzODcxIDAuMjU5NzA5IDEuNDY5NTUgMC40MTUwNiAxLjY1MDc5WiIgZmlsbD0iIzNGMzM1NiIvPjwvc3ZnPg==);
+  background-repeat: no-repeat;
+  background-position: center right 19px;
+  appearance: none;
+}

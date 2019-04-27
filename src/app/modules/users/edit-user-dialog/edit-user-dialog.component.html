@@ -1,0 +1,30 @@
+<div mat-dialog-title>
+  <div class="title-wrap">
+    <h1 class="dialog-title">{{data.fname}} {{data.name}}</h1>
+    <mat-icon class="close-modal" mat-dialog-close>close</mat-icon>
+  </div>
+</div>
+
+<mat-dialog-content>
+  <div [formGroup]="userForm" class="row">
+    <div class="col">
+      <input type="text" class="form-input" placeholder="Имя" formControlName="name">
+    </div>
+    <div class="col">
+      <input type="text" class="form-input" placeholder="Фамилия" formControlName="fname">
+    </div>
+    <div class="col">
+      <input type="text" class="form-input" placeholder="Отчество" formControlName="mname">
+    </div>
+    <div class="col">
+      <select class="form-select">
+        <option *ngFor="let item of statuses | keyvalue" [value]="item.key">{{item.value}}</option>
+      </select>
+    </div>
+  </div>
+
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button (click)="onSaveClick()">Сохранить</button>
+</mat-dialog-actions>

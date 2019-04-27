@@ -1,0 +1,41 @@
+.form-button {
+  background: #6979F8;
+  border-radius: 6px;
+  font-size: 17px;
+  line-height: 18px;
+  border: 0;
+  padding: 15px 20px;
+  color: #fff;
+}
+
+.form-wrap {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .auth-form {
+    display: flex;
+    flex-direction: column;
+    width: 240px;
+  }
+}
+
+.password-wrap {
+  position: relative;
+
+  .form-input {
+    padding-right: 54px;
+  }
+
+  .show-password {
+    position: absolute;
+    top: 16px;
+    right: 15px;
+    height: 18px;
+    width: 18px;
+    line-height: 18px;
+    cursor: pointer;
+  }
+}

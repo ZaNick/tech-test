@@ -1,0 +1,21 @@
+.dialog-title {
+  font-size: 34px;
+  line-height: 1;
+  margin: 0;
+}
+
+.title-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.row {
+  margin: 0 -14px;
+  display: flex;
+  flex-wrap: wrap;
+
+  .col {
+    padding: 0 14px;
+    width: 33.33%;
+  }
+}
