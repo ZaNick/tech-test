@@ -29,7 +29,7 @@ export class AppComponent implements OnInit {
       this._snackBar.openFromTemplate(this.snackBarTemplate, {
         horizontalPosition: 'right',
         verticalPosition: 'top',
-        // duration: res.duration || 3000
+        duration: res.duration || 3000
       });
     });
   }
