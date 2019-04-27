@@ -1,3 +1,9 @@
+:host {
+  display: block;
+  background: #e5e5e5;
+  min-height: 100vh;
+}
+
 .user {
   height: 80px;
   padding: 16px;
@@ -5,6 +11,8 @@
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
+  background: #fff;
+  border-radius: 4px;
 
   &:hover {
     box-shadow: 0px 7px 20px rgba(0, 0, 0, 0.07);
@@ -45,4 +53,55 @@
   +.user {
     margin-top: 18px;
   }
+}
+
+.preloader-wrap {
+  position: absolute;
+  top: 47px;
+  left: 0;
+  right: 0;
+  height: calc(100vh - 47px);
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tab-header-wrap {
+  width: 100%;
+  height: 47px;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.07);
+  margin-bottom: 48px;
+  display: inline-block;
+
+  .tab-header {
+    display: inline-block;
+    padding: 0 12px;
+    line-height: 47px;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 0;
+      background: #6979F8;
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
+      transition: height 0.2s ease;
+      height: 0;
+    }
+
+    &.active::after {
+      height: 3px;
+    }
+  }
+}
+
+.container {
+  width: 96vw;
+  margin: 0 auto;
 }

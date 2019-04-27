@@ -2,6 +2,9 @@
   color: #6979F8;
   font-size: 35px;
   cursor: pointer;
+  outline: none;
+  background: transparent;
+  border: none;
 }
 
 .form-input,
@@ -28,4 +31,13 @@
   background-repeat: no-repeat;
   background-position: center right 19px;
   appearance: none;
+}
+
+.btn {
+  background: #6979F8;
+  border-radius: 6px;
+  border: none;
+  line-height: 40px;
+  color: #fff;
+  padding: 0 48px;
 }

@@ -8,5 +8,5 @@ import { environment } from 'src/environments/environment';
 export class ConfigService {
   apiUrl = environment.apiUrl;
   frontUrl = environment.front;
-  showSnackBar$ = new Subject<{ message: string, action?: string, duration?: number }>();
+  showSnackBar$ = new Subject<{ message: string, duration?: number, success?: boolean }>();
 }

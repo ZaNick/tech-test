@@ -1,14 +1,38 @@
-<div class="user" *ngFor="let user of users; let i = index" (click)="onUserClick(user)">
-  <div class="col">
-    <div class="avatar">
-      <img [src]="config.apiUrl + user.avatar" alt="">
-    </div>
-    <div class="name">{{user.name}}</div>
-    <div class="balance">{{user.balance| number:'1.2-2':'Ru'}}</div>
-  </div>
-
-  <div class="col">
-    <div class="last-change">Последнее изменение {{user.lastUpdatedAt | timeDiff}} секунд назад</div>
-    <div class="status">{{user.status | userStatus}}</div>
+<div class="tab-header-wrap">
+  <div class="container">
+    <div *ngFor="let tab of tabsList; let i = index" class="tab-header" [ngClass]="{'active': currentTab === i}"
+         (click)="onTabClick(i, tab.status)">{{tab.text}}</div>
   </div>
 </div>
+<div class="tab-body-wrap container">
+  <div class="tab-body" *ngIf="currentTab === 0">
+    <ng-container [ngTemplateOutlet]="usersTemplate"></ng-container>
+  </div>
+  <div class="tab-body" *ngIf="currentTab === 1">
+    <ng-container [ngTemplateOutlet]="usersTemplate"></ng-container>
+  </div>
+  <div class="tab-body" *ngIf="currentTab === 2">
+    <ng-container [ngTemplateOutlet]="usersTemplate"></ng-container>
+  </div>
+</div>
+
+<div class="preloader-wrap" *ngIf="showPreloader">
+  <app-preloader></app-preloader>
+</div>
+
+<ng-template #usersTemplate>
+  <div class="user" *ngFor="let user of users; let i = index" (click)="onUserClick(user)">
+    <div class="col">
+      <div class="avatar">
+        <img [src]="config.apiUrl + user.avatar" alt="">
+      </div>
+      <div class="name">{{user.name}}</div>
+      <div class="balance">{{user.balance| number:'1.2-2':'Ru'}}</div>
+    </div>
+
+    <div class="col">
+      <div class="last-change">Последнее изменение {{user.lastUpdatedAt | timeDiff}} секунд назад</div>
+      <div class="status">{{user.status | userStatus}}</div>
+    </div>
+  </div>
+</ng-template>

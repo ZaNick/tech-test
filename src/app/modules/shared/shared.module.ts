@@ -4,11 +4,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from '../material/material.module';
 import { TimeDiffPipe } from 'src/app/pipes/time-diff.pipe';
 import { UserStatusPipe } from 'src/app/pipes/user-status.pipe';
+import { PreloaderComponent } from './components/preloader/preloader.component';
 
 @NgModule({
   declarations: [
     TimeDiffPipe,
-    UserStatusPipe
+    UserStatusPipe,
+    PreloaderComponent
   ],
   imports: [
     CommonModule,
@@ -21,8 +23,11 @@ import { UserStatusPipe } from 'src/app/pipes/user-status.pipe';
     FormsModule,
     ReactiveFormsModule,
     MaterialModule,
+
     TimeDiffPipe,
-    UserStatusPipe
+    UserStatusPipe,
+
+    PreloaderComponent
   ]
 })
 export class SharedModule { }

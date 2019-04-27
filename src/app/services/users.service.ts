@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ConfigService } from './config.service';
-import { Observable } from 'rxjs';
-import { User } from '../interfaces/user';
 
 @Injectable({
   providedIn: 'root'
@@ -14,10 +12,10 @@ export class UsersService {
     private _config: ConfigService
   ) { }
 
-  getUsers(type?: number) {
+  getUsers(status?: number) {
     const params: any = {};
-    if (type) {
-      params.type = type;
+    if (status !== null) {
+      params.status = status;
     }
     return this._http.get(`${this._config.apiUrl}/users`, { params });
   }

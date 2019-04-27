@@ -1,1 +1,9 @@
 <router-outlet></router-outlet>
+
+<ng-template #snackBarTemplate>
+  <div class="snack-icon" [ngClass]="{'snack-error': !snackBarData.success}">
+    <mat-icon *ngIf="snackBarData.success">check</mat-icon>
+    <mat-icon *ngIf="!snackBarData.success">close</mat-icon>
+  </div>
+  {{snackBarData.message}}
+</ng-template>

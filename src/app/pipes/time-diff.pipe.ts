@@ -2,10 +2,9 @@ import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
   name: 'timeDiff',
-  pure: false
+  // pure: false
 })
 export class TimeDiffPipe implements PipeTransform {
-  private timer: number;
 
   transform(value: string) {
     const d = new Date(value);
